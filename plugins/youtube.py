@@ -35,7 +35,7 @@ def youtube_search(query, max_results=50):
 
 class YoutubeSearchPlugin(WillPlugin):
     def render_url(self, urls):
-        return random.choice(urls)
+        return urls[0]
 
     @respond_to("youtube me (?P<query>.*)$")
     def search(self, message, query):
